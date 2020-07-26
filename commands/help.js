@@ -9,6 +9,7 @@ module.exports = {
 
     let helpEmbed = new MessageEmbed()
       .setTitle("Izuku Müzik | Yardım")
+       .setImage("https://images7.alphacoders.com/105/thumb-1920-1051897.jpg")
       .setDescription("**__Tüm Müzik Komutları__**")
       .setColor("#F8AA2A");
 
@@ -17,7 +18,7 @@ module.exports = {
         `**✯ |  ${message.client.prefix}${cmd.name} **`,
         `${cmd.description}`,
         
-        `https://images7.alphacoders.com/105/thumb-1920-1051897.jpg`,
+  
         true
       );
     });
