@@ -13,7 +13,7 @@ module.exports = {
 
     try {
       lyrics = await lyricsFinder(queue.songs[0].title, "");
-      if (!lyrics) lyrics = `:no_entry_sign:  __**Bu şarkının sözleri bulunamadı** ${queue.songs[0].title}.`;
+      if (!lyrics) lyrics = `:no_entry_sign:  __**Bu şarkının sözleri bulunamadı**__ ${queue.songs[0].title}.`;
     } catch (error) {
       lyrics = `No lyrics found for ${queue.songs[0].title}.`;
     }
