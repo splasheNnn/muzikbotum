@@ -89,12 +89,13 @@ client.on("guildCreate", guild => {
   const embed = new MessageEmbed()
     .setAuthor("Yeni bir sunucuya !")
     .setThumbnail("https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif")
+    .setImage(guild.iconURL()
     .setColor("GREEN")
          .addField("» Sunucu İsmi:", `**${guild.name}**`)
     .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
     .addField(
       "Sunucu Bilgisi:",
-      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.size}\`\nKanal Sayısı: \`${guild.channels.size}\`**`
+      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.cache.size}\`\nKanal Sayısı: \`${guild.channels.cache.size}\`**`
     )
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
