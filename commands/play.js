@@ -6,7 +6,7 @@ const youtube = new YouTubeAPI(YOUTUBE_API_KEY);
 const scdl = require("soundcloud-downloader");
 
 module.exports = {
-  name: "play",
+  name: "çal",
   cooldown: 3,
   aliases: ["p"],
   description: "Plays audio from YouTube or Soundcloud",
@@ -14,20 +14,20 @@ module.exports = {
     const { channel } = message.member.voice;
 
     const serverQueue = message.client.queue.get(message.guild.id);
-    if (!channel) return message.reply("You need to join a voice channel first!").catch(console.error);
+    if (!channel) return message.reply(":no_entry_sign: **__Önce bir sesli kanala bağlanmalısın!__**").catch(console.error);
     if (serverQueue && channel !== message.guild.me.voice.channel)
-      return message.reply(`You must be in the same channel as ${message.client.user}`).catch(console.error);
+      return message.reply(`:no_entry_sign:  ${message.client.user} **__İle e aynı odada olmalısın__** `).catch(console.error);
 
     if (!args.length)
       return message
-        .reply(`Usage: ${message.client.prefix}play <YouTube URL | Video Name | Soundcloud URL>`)
+        .reply(`**Kullanım:** ${message.client.prefix}çal <YouTube URL | Video İsmi | YouTube Çalma Listesi URL>`)
         .catch(console.error);
 
     const permissions = channel.permissionsFor(message.client.user);
     if (!permissions.has("CONNECT"))
-      return message.reply("Cannot connect to voice channel, missing permissions");
+      return message.reply(" :no_entry_sign: **__İstenen odaya girmem için yetkim yok!__**");
     if (!permissions.has("SPEAK"))
-      return message.reply("I cannot speak in this voice channel, make sure I have the proper permissions!");
+      return message.reply(":no_entry_sign: **__Odada konuşmak için yetkim yok!__**");
 
     const search = args.join(" ");
     const videoPattern = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
@@ -78,8 +78,8 @@ module.exports = {
         };
       } catch (error) {
         if (error.statusCode === 404)
-          return message.reply("Could not find that Soundcloud track.").catch(console.error);
-        return message.reply("There was an error playing that Soundcloud track.").catch(console.error);
+          return message.reply(":no_entry_sign: **__Bu SoundCloud şarkısını bulamadık.__**").catch(console.error);
+        return message.reply(":no_entry_sign: **__Sorun oluştu__**").catch(console.error);
       }
     } else {
       try {
@@ -99,7 +99,7 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       return serverQueue.textChannel
-        .send(`✅ **${song.title}** has been added to the queue by ${message.author}`)
+        .send(`✅ **${song.title}** **__başarıyla__**  ${message.author} **__tarafından sıraya eklendi__**`)
         .catch(console.error);
     }
 
