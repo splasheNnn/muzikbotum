@@ -2,7 +2,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 
 module.exports = {
   name: "döngü",
-  aliases: ['l'],
+  aliases: [''],
   description: "Şarkı döngüsünü ayarlar",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
