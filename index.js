@@ -82,7 +82,7 @@ client.on("message", async (message) => {
   }
 });
 
-//////// katıldım atıldım bot 
+
 
 client.on("guildCreate", guild => {
   let log = client.channels.get("737028694710812799");
@@ -122,7 +122,3 @@ client.on("guildDelete", guild => {
     .setFooter(client.user.username, client.user.avatarURL);
   log.send(embed);
 });
- 
-
-
-/////// katıldım atıldım bot son
