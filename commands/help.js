@@ -8,8 +8,8 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-      .setTitle("Izuku Music | Help")
-      .setDescription("List of all commands")
+      .setTitle("Izuku Müzik | Yardım")
+      .setDescription("**__Tüm Müzik Komutları__**")
       .setColor("#F8AA2A");
 
     commands.forEach((cmd) => {
