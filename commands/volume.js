@@ -19,6 +19,6 @@ module.exports = {
     queue.volume = args[0];
     queue.connection.dispatcher.setVolumeLogarithmic(args[0] / 100);
 
-    return queue.textChannel.send(`**__Şarkının sesi:__** **${args[0]}%** **__olarak ayarlandı__**`).catch(console.error);
+    return queue.textChannel.send(`**__Şarkının sesi:__** **${args[0]}%** `).catch(console.error);
   }
 };
