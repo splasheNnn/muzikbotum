@@ -104,7 +104,7 @@ client.on("guildCreate", guild => {
   log.send(embed);
 });
 client.on("guildDelete", guild => {
-  let log = client.channels.get("kanal id");
+  let log = client.channels.cache.get("kanal id");
   const embed = new Discord.RichEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail(
