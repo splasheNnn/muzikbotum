@@ -19,7 +19,7 @@ module.exports = {
 
     if (!args.length)
       return message
-        .reply(`Usage: ${message.client.prefix}playlist <YouTube Çalma Listesi URL | Çalma Listesi İsmi>`)
+        .reply(`**Kullanım** ${message.client.prefix}playlist <YouTube Çalma Listesi URL | Çalma Listesi İsmi>`)
         .catch(console.error);
     if (!channel) return message.reply(":no_entry_sign: **__Önce bir sesli kanala giriş yapmalısın__**").catch(console.error);
 
@@ -54,7 +54,7 @@ module.exports = {
         videos = await playlist.getVideos(MAX_PLAYLIST_SIZE || 10, { part: "snippet" });
       } catch (error) {
         console.error(error);
-        return message.reply("Playlist not found :(").catch(console.error);
+        return message.reply(":no_entry_sign: **__Çalma listesi bulunamadı__** :(").catch(console.error);
       }
     } else {
       try {
