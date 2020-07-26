@@ -5,7 +5,7 @@ const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const { TOKEN, PREFIX } = require("./config.json");
-const Discord = require("discord.js")
+const { MessageEmbed } = require("discord.js");
 const client = new Client({ disableMentions: "everyone" });
 
 client.login(TOKEN);
