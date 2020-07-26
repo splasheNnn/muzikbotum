@@ -81,3 +81,48 @@ client.on("message", async (message) => {
     message.reply("There was an error executing that command.").catch(console.error);
   }
 });
+
+//////// katıldım atıldım bot 
+
+client.on("guildCreate", guild => {
+  let log = client.channels.get("737028694710812799");
+  const embed = new Discord.RichEmbed()
+    .setAuthor("Yeni bir sunucuya !")
+    .setThumbnail(
+      guild.iconURL ||
+        "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
+    )
+    .setColor("GREEN")
+         .addField("» Sunucu İsmi:", `**${guild.name}**`)
+    .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
+    .addField(
+      "Sunucu Bilgisi:",
+      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.size}\`\nKanal Sayısı: \`${guild.channels.size}\`**`
+    )
+    .setTimestamp()
+    .setFooter(client.user.username, client.user.avatarURL);
+  log.send(embed);
+});
+client.on("guildDelete", guild => {
+  let log = client.channels.get("kanal id");
+  const embed = new Discord.RichEmbed()
+    .setAuthor("Bir sunucudan atıldım -_-")
+    .setThumbnail(
+      guild.iconURL ||
+        "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
+    )
+    .setColor("RED")
+       .addField("» Sunucu İsmi:", `**${guild.name}**`)
+    .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
+    .addField(
+      "Sunucu Bilgisi:",
+      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.size}\`\nKanal Sayısı: \`${guild.channels.size}\`**`
+    )
+    .setTimestamp()
+    .setFooter(client.user.username, client.user.avatarURL);
+  log.send(embed);
+});
+ 
+
+
+/////// katıldım atıldım bot son
