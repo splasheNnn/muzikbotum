@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "np",
-  description: "Show now playing song",
+  description: "Çalan şarkıyı gösterir",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.reply(":no_entry_sign:  __**Şuanda hiçbir şarkı çalmıyor.**__").catch(console.error);
