@@ -16,6 +16,8 @@ module.exports = {
       helpEmbed.addField(
         `**✯ |  ${message.client.prefix}${cmd.name} **`,
         `${cmd.description}`,
+        
+        `https://images7.alphacoders.com/105/thumb-1920-1051897.jpg`,
         true
       );
     });
