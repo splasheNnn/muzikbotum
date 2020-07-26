@@ -2,9 +2,9 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 
 
 module.exports = {
-  name: "durdur",
+  name: "bitir",
   aliases: ["siktir","sie","kapat","bitir"],
-  description: "Şarkıyı durdurur",
+  description: "Şarkıyı bitirir",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     
@@ -13,6 +13,6 @@ module.exports = {
 
     queue.songs = [];
     queue.connection.dispatcher.end();
-    queue.textChannel.send(`${message.author} ⏹ **__şarkıyı durdurdu!__**`).catch(console.error);
+    queue.textChannel.send(`${message.author} ⏹ **__şarkıyı kapattı!__**`).catch(console.error);
   }
 };
