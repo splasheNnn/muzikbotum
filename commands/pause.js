@@ -2,7 +2,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 
 module.exports = {
   name: "durdur",
-  description: "Pause the currently playing music",
+  description: "Çalan şarkıyı durdurur",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.reply(":no_entry_sign: **__Şuanda hiçbir şarkı çalmıyor.**__").catch(console.error);
