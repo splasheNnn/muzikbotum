@@ -108,7 +108,7 @@ client.on("guildDelete", guild => {
   const embed = new MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail(
-      guild.iconURL ||
+       guild.iconURL(); ||
         "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
     )
     .setColor("RED")
