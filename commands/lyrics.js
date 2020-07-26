@@ -4,7 +4,7 @@ const lyricsFinder = require("lyrics-finder");
 module.exports = {
   name: "sözler",
   aliases: ["ly"],
-  description: "Get lyrics for the currently playing song",
+  description: "Çalan şarkının sözlerini aratır",
   async execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.channel.send(":no_entry_sign: **__Şuanda şarkı çalmıyor.__**").catch(console.error);
