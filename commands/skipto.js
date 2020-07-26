@@ -7,12 +7,12 @@ module.exports = {
   execute(message, args) {
     if (!args.length)
       return message
-        .reply(`Usage: ${message.client.prefix}${module.exports.name} <Queue Number>`)
+        .reply(`**Kullanım:** ${message.client.prefix}${module.exports.name} <Şarkının Sıra Numarası>`)
         .catch(console.error);
 
     if (isNaN(args[0]))
       return message
-        .reply(`Usage: ${message.client.prefix}${module.exports.name} <Queue Number>`)
+           .reply(`**Kullanım:** ${message.client.prefix}${module.exports.name} <Şarkının Sıra Numarası>`)
         .catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
