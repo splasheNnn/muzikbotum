@@ -1,9 +1,9 @@
 const { canModifyQueue } = require("../util/EvobotUtil");
 
 module.exports = {
-  name: "skipto",
-  aliases: ["st"],
-  description: "Skip to the selected queue number",
+  name: "şarkıyageç",
+  aliases: ["şg"],
+  description: "Sırada numarasını belirttiğiniz şarkıya geçer",
   execute(message, args) {
     if (!args.length)
       return message
@@ -16,11 +16,11 @@ module.exports = {
         .catch(console.error);
 
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return message.channel.send("There is no queue.").catch(console.error);
+    if (!queue) return message.channel.send("**__Şuanda bir çalma listesi yok__**").catch(console.error);
     if (!canModifyQueue(message.member)) return;
 
     if (args[0] > queue.songs.length)
-      return message.reply(`The queue is only ${queue.songs.length} songs long!`).catch(console.error);
+      return message.reply(`**__Sıra sadece ${queue.songs.length} şarkıdan oluşabilir!__**`).catch(console.error);
 
     queue.playing = true;
     if (queue.loop) {
@@ -31,6 +31,6 @@ module.exports = {
       queue.songs = queue.songs.slice(args[0] - 2);
     }
     queue.connection.dispatcher.end();
-    queue.textChannel.send(`${message.author} ⏭ skipped ${args[0] - 1} songs`).catch(console.error);
+    queue.textChannel.send(`${message.author} ⏭ **__Sıra'dan bir şarkıya geçti__** ${args[0] - 1} songs`).catch(console.error);
   }
 };
