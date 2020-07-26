@@ -116,7 +116,7 @@ client.on("guildDelete", guild => {
     .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
     .addField(
       "Sunucu Bilgisi:",
-      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.size}\`\nKanal Sayısı: \`${guild.channels.size}\`**`
+      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.cache.size}\`\nKanal Sayısı: \`${guild.channels.cache.size}\`**`
     )
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
