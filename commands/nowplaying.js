@@ -5,11 +5,11 @@ module.exports = {
   description: "Show now playing song",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return message.reply("There is nothing playing.").catch(console.error);
+    if (!queue) return message.reply(":no_entry_sign:  __**Şuanda hiçbir şarkı çalmıyor.**__").catch(console.error);
     const song = queue.songs[0];
 
     let nowPlaying = new MessageEmbed()
-      .setTitle("Now playing")
+      .setTitle("**Şuanda çalan**")
       .setDescription(`${song.title}\n${song.url}`)
       .setColor("#F8AA2A")
       .setAuthor("EvoBot")
