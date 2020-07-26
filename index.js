@@ -85,7 +85,7 @@ client.on("message", async (message) => {
 
 
 client.on("guildCreate", guild => {
-  let log = client.channels.get("737028694710812799");
+  let log = client.channels.cache.get("737028694710812799");
   const embed = new Discord.RichEmbed()
     .setAuthor("Yeni bir sunucuya !")
     .setThumbnail(
