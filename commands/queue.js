@@ -1,12 +1,12 @@
 const { MessageEmbed, splitMessage, escapeMarkdown } = require("discord.js");
 
 module.exports = {
-  name: "queue",
+  name: "sıra",
   aliases: ["q"],
-  description: "Show the music queue and now playing.",
+  description: "Müzik sırasını gösterir.",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
-    if (!queue) return message.reply("There is nothing playing.").catch(console.error);
+    if (!queue) return message.reply(":no_entry_sign: **__Şuanda hiçbirşey çalmıyor.__**").catch(console.error);
 
     const description = queue.songs.map((song, index) => `${index + 1}. ${escapeMarkdown(song.title)}`);
 
