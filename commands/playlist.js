@@ -27,7 +27,7 @@ module.exports = {
     if (!permissions.has("CONNECT"))
       return message.reply(":no_entry_sign: **__İstenen odaya giriş için yetkim yok__**");
     if (!permissions.has("SPEAK"))
-      return message.reply(":no_entry_sign: **__Odada konuşmak için yetkim yok!**");
+      return message.reply(":no_entry_sign: **__Odada konuşmak için yetkim yok!__**");
 
     const search = args.join(" ");
     const pattern = /^.*(youtu.be\/|list=)([^#\&\?]*).*/gi;
