@@ -10,7 +10,7 @@ module.exports = {
     if (!song) {
       queue.channel.leave();
       message.client.queue.delete(message.guild.id);
-      return queue.textChannel.send("🚫 Music queue finished!.").catch(console.error);
+      return queue.textChannel.send("🚫 **Müzik sırası bitti!**.").catch(console.error);
     }
 
     let stream = null;
@@ -61,7 +61,7 @@ module.exports = {
     dispatcher.setVolumeLogarithmic(queue.volume / 100);
 
     try {
-      var playingMessage = await queue.textChannel.send(`🎶 Music Started : **${song.title}** ${song.url}`);
+      var playingMessage = await queue.textChannel.send(`🎶 **Müzik Başladı!** : **${song.title}** ${song.url}`);
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
       await playingMessage.react("🔁");
@@ -85,7 +85,7 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.connection.dispatcher.end();
-          queue.textChannel.send(`${user} ⏩ skipped the song`).catch(console.error);
+          queue.textChannel.send(`${user} ⏩ **şarkıyı geçti**`).catch(console.error);
           collector.stop();
           break;
 
@@ -95,11 +95,11 @@ module.exports = {
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
-            queue.textChannel.send(`${user} ⏸ stopped the song.`).catch(console.error);
+            queue.textChannel.send(`${user} ⏸ **şarkıyı durdurdu.**`).catch(console.error);
           } else {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.resume();
-            queue.textChannel.send(`${user} ▶ started the song!`).catch(console.error);
+            queue.textChannel.send(`${user} ▶ --şarkıyı başlattı!--`).catch(console.error);
           }
           break;
 
@@ -107,14 +107,14 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.loop = !queue.loop;
-          queue.textChannel.send(`${user} Loop is  ${queue.loop ? "**on**" : "**off**"}`).catch(console.error);
+          queue.textChannel.send(`${user} **Şarkı döngü modu :**  ${queue.loop ? "__**on**__" : "__**off**__"}`).catch(console.error);
           break;
 
         case "⏹":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.songs = [];
-          queue.textChannel.send(`${user} ⏹ stopped the music!`).catch(console.error);
+          queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!`).catch(console.error);
           try {
             queue.connection.dispatcher.end();
           } catch (error) {
