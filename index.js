@@ -89,7 +89,7 @@ client.on("guildCreate", guild => {
   const embed = new MessageEmbed()
     .setAuthor("Yeni bir sunucuya !")
     .setThumbnail(
-       guild.iconURL(); ||
+        ||
         "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
     )
     .setColor("GREEN")
@@ -107,8 +107,9 @@ client.on("guildDelete", guild => {
   let log = client.channels.cache.get("737028694710812799");
   const embed = new MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
+    .setImage(guild.iconURL())
     .setThumbnail(
-       guild.iconURL(); ||
+        ||
         "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
     )
     .setColor("RED")
