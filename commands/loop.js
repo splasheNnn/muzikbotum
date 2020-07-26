@@ -3,7 +3,7 @@ const { canModifyQueue } = require("../util/EvobotUtil");
 module.exports = {
   name: "döngü",
   aliases: ['l'],
-  description: "Toggle music loop",
+  description: "Şarkı döngüsünü ayarlar",
   execute(message) {
     const queue = message.client.queue.get(message.guild.id);
     if (!queue) return message.reply(":no_entry_sign:  **__Şuanda şarkı çalmıyor.**").catch(console.error);
