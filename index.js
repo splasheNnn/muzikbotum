@@ -86,7 +86,7 @@ client.on("message", async (message) => {
 
 client.on("guildCreate", guild => {
   let log = client.channels.cache.get("737028694710812799");
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya !")
     .setThumbnail(
       guild.iconURL ||
@@ -105,7 +105,7 @@ client.on("guildCreate", guild => {
 });
 client.on("guildDelete", guild => {
   let log = client.channels.cache.get("kanal id");
-  const embed = new Discord.RichEmbed()
+  const embed = new Discord.MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail(
       guild.iconURL ||
