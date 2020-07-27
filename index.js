@@ -119,33 +119,45 @@ client.on("guildDelete", guild => {
 	
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
-    .setTitle('Izuku Music |👑')
+    .setTitle('Beni Sunucuna Eklediğin İçin Teşekkür Ediyorum! Aşağıdan Bot Komutlarına Bakabilirsin |👑')
+    
          .setDescription(`
          ✯ |  !!yardım === Müzik komutlarını listeler
   
+
 	 ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar
   
+
 	 ✯ |  !!bitir === Çalan şarkıyı bitirir
   
+
 	 ✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer
  
+
 	 ✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer
 		   
+
 	 ✯ |  !!durdur === Şarkıyı durdurur
   
+
 	 ✯ |  !!devamet === Şarkıyı devam ettirir
   
+
 	 ✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler
   
+
 	 ✯ |  !!playlist === YouTubeden bir playlist çalar
   
+
          ✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar
   
+
 	 ✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar
 			 
+
          ✯ |  !!volume === Şarkının sesini ayarlarsınız`)
         
-    .setImage('https://thumbs.gfycat.com/UnderstatedObviousAmericancrocodile-size_restricted.gif')
+    .setImage('https://media3.giphy.com/media/UsMQAndGISI4ZZ63Ze/giphy.gif')
  
   guild.owner.send(izuku);
   console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
