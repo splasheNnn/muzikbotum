@@ -121,16 +121,8 @@ client.on("guildDelete", guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Merhaba')
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler',true)
-    .addField('✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar ',true)
-    .addField('✯ |  !!bitir === Çalan şarkıyı bitirir',true)
-    .addField('✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer',true)
-    .addField('✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer',true)
-    .addField('✯ |  !!durdur === Şarkıyı durdurur',true)
-    .addField('✯ |  !!devamet === Şarkıyı devam ettirir',true)
-    .addField('✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler',true)
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler',true)
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler',true)
+    .addField("✯ |  !!yardım === Müzik komutlarını listeler","✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar")
+   
  
   guild.owner.send(izuku);
   console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
