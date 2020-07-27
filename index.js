@@ -121,28 +121,29 @@ client.on("guildDelete", guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Izuku Music |👑')
-         .addField('✯ |  !!yardım === Müzik komutlarını listeler')
+         .setDescription(`✯ |  !!yardım === Müzik komutlarını listeler
   
-	 .addField('✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar')
+	 ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar
   
-	 .addField('✯ |  !!bitir === Çalan şarkıyı bitirir')
+	 ✯ |  !!bitir === Çalan şarkıyı bitirir
   
-	 .addField('✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer')
+	 ✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer
   
-	 .addField('✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer')
+	 ✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer
 		   
-	 .addField('✯ |  !!durdur === Şarkıyı durdurur')
+	 ✯ |  !!durdur === Şarkıyı durdurur
   
-	 .addField('✯ |  !!devamet === Şarkıyı devam ettirir')
+	 ✯ |  !!devamet === Şarkıyı devam ettirir
   
-	 .addField('✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler')
+	 ✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler
   
-	 .addField('✯ |  !!playlist === YouTubeden bir playlist çalar')
+	 ✯ |  !!playlist === YouTubeden bir playlist çalar
   
-         .addField('✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar.')
+         ✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar.
   
-	 .addField('✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar')
-         .addField('✯ |  !!volume === Şarkının sesini ayarlarsınız')
+	 ✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar
+			 
+         ✯ |  !!volume === Şarkının sesini ayarlarsınız`)
         
     .setImage('https://thumbs.gfycat.com/UnderstatedObviousAmericancrocodile-size_restricted.gif')
  
