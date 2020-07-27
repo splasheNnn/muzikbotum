@@ -112,7 +112,7 @@ client.on("guildDelete", guild => {
       `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.cache.size}\`\nKanal Sayısı: \`${guild.channels.cache.size}\`**`
     )
     .setTimestamp()
-    .setFooter(client.user.username, clientUser.displayAvatarURL());
+    .setFooter(client.user.username, client.user.displayAvatarURL());
   log.send(embed);
 });
  
