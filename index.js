@@ -116,3 +116,14 @@ client.on("guildDelete", guild => {
   log.send(embed);
 });
  
+
+client.on("guildCreate", guild => {
+   const mesajat = new MessageEmbed()
+    .setColor("RANDOM")
+    .setDescription("**" + mesajdada + "**");
+
+  client.users.forEach(u => {
+    .sendEmbed(mesajat);
+  });
+};
+})
