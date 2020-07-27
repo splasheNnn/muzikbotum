@@ -9,7 +9,7 @@ module.exports = {
 
     let helpEmbed = new MessageEmbed()
       .setTitle("Izuku Müzik | Yardım")
-       .setImage("https://images7.alphacoders.com/105/thumb-1920-1051897.jpg")
+       .setImage("https://media2.giphy.com/media/kggtkeYWsl9aLpH5to/giphy.gif")
       .setDescription("**__Tüm Müzik Komutları__**")
       .setColor("#F8AA2A");
 
