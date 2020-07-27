@@ -126,27 +126,27 @@ client.on("guildCreate", async guild => {
          .setDescription(`
          ✯ |  !!yardım === Müzik komutlarını listeler
   
-	 ✯ |  !!çal === _İsmini yazdığınız şarkıyı çalmaya başlar_
+	 ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar
   
-	 ✯ |  !!bitir === _Çalan şarkıyı bitirir_
+	 ✯ |  !!bitir === Çalan şarkıyı bitirir
   
-	 ✯ |  !!geç === _Çalan şarkıdan bir sonraki şarkıya geçer_
+	 ✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer
  
-	 ✯ |  !!şarkıyageç === _Sıradan numarasını verdiğiniz bir şarkıya geçer_
+	 ✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer
 		   
-	 ✯ |  !!durdur === _Şarkıyı durdurur_
+	 ✯ |  !!durdur === Şarkıyı durdurur
   
-	 ✯ |  !!devamet === _Şarkıyı devam ettirir_
+	 ✯ |  !!devamet === Şarkıyı devam ettirir
   
-	 ✯ |  !!sil === _Sıradan numarasını verdiğiniz bir şarkıyı siler_
+	 ✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler
   
-	 ✯ |  !!playlist === _YouTubeden bir playlist çalar_
+	 ✯ |  !!playlist === YouTubeden bir playlist çalar
   
-         ✯ |  !!karıştır === _Şarkı sırasındaki şarkıları karışık olarak çalar_
+         ✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar
   
-	 ✯ |  !!döngü === _Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar_
+	 ✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar
 			 
-         ✯ |  !!volume === _Şarkının sesini ayarlarsınız_`)
+         ✯ |  !!volume === Şarkının sesini ayarlarsınız`)
         
     .setImage('https://thumbs.gfycat.com/UnderstatedObviousAmericancrocodile-size_restricted.gif')
  
