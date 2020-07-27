@@ -123,7 +123,7 @@ client.on("guildCreate", async guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Izuku Music |👑')
-         .setDescription(`
+         .setDescription('
          ✯ |  !!yardım === Müzik komutlarını listeler
   
 	 ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar
@@ -146,7 +146,7 @@ client.on("guildCreate", async guild => {
   
 	 ✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar
 			 
-         ✯ |  !!volume === Şarkının sesini ayarlarsınız`)
+         ✯ |  !!volume === Şarkının sesini ayarlarsınız')
         
     .setImage('https://thumbs.gfycat.com/UnderstatedObviousAmericancrocodile-size_restricted.gif')
  
