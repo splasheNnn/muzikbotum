@@ -123,7 +123,8 @@ client.on("guildCreate", async guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Izuku Music |👑')
-         .setDescription(`**__✯ |  !!yardım === Müzik komutlarını listeler**
+         .setDescription(`
+        ** ✯ |  !!yardım === Müzik komutlarını listeler**
   
 	** ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar**
   
