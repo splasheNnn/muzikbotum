@@ -117,15 +117,13 @@ client.on("guildDelete", guild => {
 });
  
 
-client.on("guildCreate", guild => {
-
-  
-   const exampleEmbed = new MessageEmbed()
-	.setColor('#0099ff')
-	.setTitle('Some title')
-	.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	.setDescription('Some description here')
-	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
-  guild.owner.send(exampleEmbed)  
-
-    });
+	
+client.on("guildCreate", async guild => {
+  const izuku = [
+    "Bot sunucuna eklendi.Tebrikler dostum.",
+    "Bu bot **BIGGZ#3878** tarafından geliştirilmektedir.",
+    'iyi günlerde kullan..'
+  ];
+  guild.owner.send(izuku);
+  console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
+});
