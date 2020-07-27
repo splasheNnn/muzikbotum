@@ -121,16 +121,16 @@ client.on("guildDelete", guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Merhaba')
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler', )
-    .addField('✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar', )
-    .addField('✯ |  !!bitir === Çalan şarkıyı bitirir', )
-    .addField('✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer', )
-    .addField('✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer', )
-    .addField('✯ |  !!durdur === Şarkıyı durdurur', )
-    .addField('✯ |  !!devamet === Şarkıyı devam ettirir', )
-    .addField('✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler', )
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler', )
-    .addField('✯ |  !!yardım === Müzik komutlarını listeler', )
+    .addField('✯ |  !!yardım === Müzik komutlarını listeler', _________ )
+    .addField('✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar', _________ )
+    .addField('✯ |  !!bitir === Çalan şarkıyı bitirir', _________ )
+    .addField('✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer', _________ )
+    .addField('✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer', _________ )
+    .addField('✯ |  !!durdur === Şarkıyı durdurur', _________ )
+    .addField('✯ |  !!devamet === Şarkıyı devam ettirir', _________ )
+    .addField('✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler', _________ )
+    .addField('✯ |  !!yardım === Müzik komutlarını listeler', _________ )
+    .addField('✯ |  !!yardım === Müzik komutlarını listeler', _________ )
  
   guild.owner.send(izuku);
   console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
