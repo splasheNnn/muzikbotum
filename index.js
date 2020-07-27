@@ -105,11 +105,11 @@ client.on("guildDelete", guild => {
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail("https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif")
     .setColor("RED")
-       .addField("» Sunucu İsmi:", `**${guild.name}**`)
-    .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
+       .addField("» Sunucu İsmi:", `**${guild.cache.name}**`)
+    .addField("» Sunucu ID:", `\`\`\`${guild.cache.id}\`\`\``)
     .addField(
       "Sunucu Bilgisi:",
-      `**Sunucu Sahibi: \`${guild.owner.tag}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.cache.size}\`\nKanal Sayısı: \`${guild.channels.cache.size}\`**`
+      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.cache.size}\`\nKanal Sayısı: \`${guild.channels.cache.size}\`**`
     )
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
