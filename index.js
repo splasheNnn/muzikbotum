@@ -123,29 +123,29 @@ client.on("guildCreate", async guild => {
 client.on("guildCreate", async guild => {
   const izuku = new MessageEmbed()
     .setTitle('Izuku Music |👑')
-         .setDescription(`**__✯ |  !!yardım === Müzik komutlarını listeler__**
+         .setDescription(`**__✯ |  !!yardım === Müzik komutlarını listeler**
   
-	** __✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar__**
+	** ✯ |  !!çal === İsmini yazdığınız şarkıyı çalmaya başlar**
   
-	** __✯ |  !!bitir === Çalan şarkıyı bitirir__**
+	** ✯ |  !!bitir === Çalan şarkıyı bitirir**
   
-	** __✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer__**
-  
-	** __✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer__**
+	** ✯ |  !!geç === Çalan şarkıdan bir sonraki şarkıya geçer**
+ 
+	** ✯ |  !!şarkıyageç === Sıradan numarasını verdiğiniz bir şarkıya geçer**
 		   
-	** __✯ |  !!durdur === Şarkıyı durdurur__**
+	** ✯ |  !!durdur === Şarkıyı durdurur**
   
-	** __✯ |  !!devamet === Şarkıyı devam ettirir__**
+	** ✯ |  !!devamet === Şarkıyı devam ettirir**
   
-	** __✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler__**
+	** ✯ |  !!sil === Sıradan numarasını verdiğiniz bir şarkıyı siler**
   
-	** __✯ |  !!playlist === YouTubeden bir playlist çalar__**
+	** ✯ |  !!playlist === YouTubeden bir playlist çalar**
   
-        ** __✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar__**
+        ** ✯ |  !!karıştır === Şarkı sırasındaki şarkıları karışık olarak çalar**
   
-	** __✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar__**
+	** ✯ |  !!döngü === Şarkıyı sürekli çalacak şekilde döngülü olarak ayarlar**
 			 
-        ** __✯ |  !!volume === Şarkının sesini ayarlarsınız__**`)
+        ** ✯ |  !!volume === Şarkının sesini ayarlarsınız**`)
         
     .setImage('https://thumbs.gfycat.com/UnderstatedObviousAmericancrocodile-size_restricted.gif')
  
