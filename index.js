@@ -100,7 +100,7 @@ client.on("guildCreate", guild => {
   log.send(embed);
 });
 client.on("guildDelete", guild => {
-  let log = client.channels.cache.get("737028694710812799");
+  let log = client.channels.cache.get("737374857825746984");
   const embed = new MessageEmbed()
     .setAuthor("Bir sunucudan atıldım -_-")
     .setThumbnail("https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif")
