@@ -61,7 +61,9 @@ module.exports = {
     dispatcher.setVolumeLogarithmic(queue.volume / 100);
 
     try {
-      var playingMessage = await queue.textChannel.send(`🎶 **Müzik Başladı!** : **${song.title}** ${song.url} **Tepkileri Sadece Yetkililer Kullanabilir!**`);
+      var playingMessage = await queue.textChannel.send(`🎶 **Müzik Başladı!** : **${song.title}** ${song.url} 
+
+      **Tepkileri Sadece Yetkililer Kullanabilir!**`);
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
       await playingMessage.react("🔁");
