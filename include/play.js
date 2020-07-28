@@ -75,7 +75,7 @@ module.exports = {
       time: song.duration > 0 ? song.duration * 1000 : 600000
     });
 
-    collector.on("collect", (reaction, user) => {
+      collector.on("collect", (reaction, user) => {
       if (!queue) return;
       const member = message.guild.member(user);
 
@@ -84,14 +84,10 @@ module.exports = {
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-          if(!message.member.hasPermissions("BAN_MEMBERS")) return message.channel.send(
-    new Discord.RichEmbed() 
-.setColor('RED')
-.setDescription(':x_:  | Bu komutu kullanamasın çünkü **BAN_MEMBERS** yetkisine sahip değilsin.')).then(message => message.delete(5000)); 
+          if(!member.hasPermissions("BAN_MEMBERS")) return;
           queue.connection.dispatcher.end();
           queue.textChannel.send(`${user} ⏩ **şarkıyı geçti**`).catch(console.error);
           collector.stop();
-          break;
 
         case "⏯":
           reaction.users.remove(user).catch(console.error);
