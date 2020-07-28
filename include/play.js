@@ -93,6 +93,7 @@ module.exports = {
         case "⏯":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
+          if(!message.member.permissions.has("BAN_MEMBERS")) return;
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
@@ -100,7 +101,7 @@ module.exports = {
           } else {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.resume();
-            queue.textChannel.send(`${user} ▶ --şarkıyı başlattı!--`).catch(console.error);
+            queue.textChannel.send(`${user} ▶ **şarkıyı başlattı!**`).catch(console.error);
           }
           break;
 
@@ -114,6 +115,7 @@ module.exports = {
         case "⏹":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
+          if(!message.member.permissions.has("BAN_MEMBERS")) return;
           queue.songs = [];
           queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!`).catch(console.error);
           try {
