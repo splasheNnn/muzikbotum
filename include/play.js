@@ -108,6 +108,7 @@ module.exports = {
         case "🔁":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
+          if(!message.member.permissions.has("BAN_MEMBERS")) return;
           queue.loop = !queue.loop;
           queue.textChannel.send(`${user} **Şarkı döngü modu :**  ${queue.loop ? "__**on**__" : "__**off**__"}`).catch(console.error);
           break;
