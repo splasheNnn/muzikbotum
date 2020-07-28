@@ -162,3 +162,10 @@ client.on("guildCreate", async guild => {
   guild.owner.send(izuku);
   console.log(`LOG: ${guild.name}. sunucuya katıldım!`);
 });
+
+
+client.on('message', msg => {
+  if (msg.content === '!!davet') {
+    msg.reply('**__İşte Davet Linkim__** : https://discord.com/oauth2/authorize?client_id=672006644128940032&scope=bot&permissions=2146958847');
+  }
+});
