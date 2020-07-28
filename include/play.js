@@ -62,6 +62,10 @@ module.exports = {
 
     try {
       var playingMessage = await queue.textChannel.send(`🎶 **Müzik Başladı!** : **${song.title}** ${song.url}`);
+      var x = (reaction, user) => reaction.emoji.name === '⏭' && user.id ===  message.author.id;
+      var x = (reaction, user) => reaction.emoji.name === '⏯' && user.id ===  message.author.id;
+      var x = (reaction, user) => reaction.emoji.name === '🔁' && user.id ===  message.author.id;
+      var x = (reaction, user) => reaction.emoji.name === '⏹' && user.id ===  message.author.id;
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
       await playingMessage.react("🔁");
