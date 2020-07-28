@@ -28,10 +28,16 @@ module.exports = {
 
     return message.channel.send(helpEmbed).catch(console.error);
     
-    let help2 = new MessageEmbed()
-      .setImage("https://media2.giphy.com/media/kggtkeYWsl9aLpH5to/giphy.gif")
-      .setURL("**__Botu Davet Et__ == https://discord.com/oauth2/authorize?client_id=672006644128940032&scope=bot&permissions=2146958847**")
-      .setColor("#F8AA2A");
-      return message.channel.send(help2).catch(console.error);
+    
+ let exampleEmbed = new MessageEmbed()
+	.setColor('#0099ff')
+	.setTitle('Botu Sunucunuza Davet edin')
+	.setURL('https://discord.com/oauth2/authorize?client_id=672006644128940032&scope=bot&permissions=2146958847')
+	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
+	.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTimestamp()
+	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+
+channel.send(exampleEmbed);
   }
 };
