@@ -84,7 +84,7 @@ module.exports = {
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-           if(message.member.hasPermission("BAN_MEMBERS")) return;
+           if(!message.member.hasPermission("BAN_MEMBERS")) return;
           queue.connection.dispatcher.end();
           queue.textChannel.send(`${user} ⏩ **şarkıyı geçti**`).catch(console.error);
           collector.stop();
