@@ -95,7 +95,7 @@ module.exports = {
         case "⏯":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-          if(!message.member.permissions.has("BAN_MEMBERS")) return;
+          if(!message.member.permissions.has(" ")) return;
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
@@ -120,7 +120,7 @@ module.exports = {
           if (!canModifyQueue(member)) return;
           if(!message.member.permissions.has("BAN_MEMBERS")) return;
           queue.songs = [];
-          queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!`).catch(console.error);
+          queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!!`).catch(console.error);
           try {
             queue.connection.dispatcher.end();
           } catch (error) {
