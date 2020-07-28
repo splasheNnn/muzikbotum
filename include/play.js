@@ -63,7 +63,7 @@ module.exports = {
     try {
       var playingMessage = await queue.textChannel.send(`🎶 **Müzik Başladı!** : **${song.title}** ${song.url} 
 
-      **Tepkileri Sadece Yetkililer Kullanabilir!**`);
+      **Aşağıdaki Tepkileri Sadece Yetkililer Kullanabilir!**`);
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");
       await playingMessage.react("🔁");
