@@ -70,7 +70,7 @@ module.exports = {
       console.error(error);
     }
 
-   const filter = (reaction, user) => user.id !== message.client.user.id && user.hasPermission("BAN_MEMBERS");
+   const filter = (reaction, member) => member.id !== message.client.user.id && member.hasPermission("BAN_MEMBERS");
     var collector = playingMessage.createReactionCollector(filter, {
       time: song.duration > 0 ? song.duration * 1000 : 600000
     });
