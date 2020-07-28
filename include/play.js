@@ -83,7 +83,7 @@ module.exports = {
         case "⏭":
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
-          if(!message.member.permissions.has("ADMINISTRATOR")) return;
+          if(!message.member.permissions.has("ADMINISTRATOR")) return;false
           if (!canModifyQueue(member)) return;
           queue.connection.dispatcher.end();
           queue.textChannel.send(`${user} ⏩ **şarkıyı geçti**`).catch(console.error);
@@ -93,7 +93,7 @@ module.exports = {
         case "⏯":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-          if(!message.member.permissions.has("ADMINISTRATOR")) return;
+          if(!message.member.permissions.has("ADMINISTRATOR")) return;false
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
@@ -108,7 +108,7 @@ module.exports = {
         case "🔁":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-          if(!message.member.permissions.has("ADMINISTRATOR")) return;
+          if(!message.member.permissions.has("ADMINISTRATOR")) return;false
           queue.loop = !queue.loop;
           queue.textChannel.send(`${user} **Şarkı döngü modu :**  ${queue.loop ? "__**on**__" : "__**off**__"}`).catch(console.error);
           break;
@@ -116,7 +116,7 @@ module.exports = {
         case "⏹":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
-          if(!message.member.permissions.has("ADMINISTRATOR")) return;
+          if(!message.member.permissions.has("ADMINISTRATOR")) return;false
           queue.songs = [];
           queue.textChannel.send(`${user} ⏹ şarkıyı durdurdu!!`).catch(console.error);
           try {
