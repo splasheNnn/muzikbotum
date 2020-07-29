@@ -21,7 +21,8 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  client.user.setActivity(`${PREFIX}yardım`);
+  console.log(`${client.user.username}: Şu an ` + client.channels.size + ` adet kanala, ` + client.guilds.size + ` adet sunucuya ve ` + client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() + ` kullanıcıya hizmet veriliyor!`);
+  client.user.setActivity(`${PREFIX}yardım  !!davet`);
 });
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
@@ -67,7 +68,7 @@ client.on("message", async (message) => {
     if (now < expirationTime) {
       const timeLeft = (expirationTime - now) / 1000;
       return message.reply(
-        `please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`
+        `${timeLeft.toFixed(1)} (s) **Sonra**  \`${command.name}\` **komutunu tekrar kullanabilirsin.**`
       );
     }
   }
