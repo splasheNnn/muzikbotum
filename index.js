@@ -21,7 +21,7 @@ const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 client.on("ready", () => {
   console.log(`${client.user.username} ready!`);
-  console.log(`${client.user.username}: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` adet sunucuya  hizmet veriliyor!`);
+  console.log(`${client.user.username}: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` sunucuya `+ client.users.cache.size` adet kullanıcıya   hizmet veriliyor!`);
   client.user.setActivity(`${PREFIX}yardım  !!davet`);
 });
 client.on("warn", (info) => console.log(info));
