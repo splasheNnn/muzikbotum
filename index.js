@@ -169,3 +169,15 @@ client.on('message', msg => {
     msg.reply('**__İşte Davet Linkim__** : https://discord.com/oauth2/authorize?client_id=672006644128940032&scope=bot&permissions=2146958847');
   }
 });
+
+
+client.on('message', message => {
+  if (message.content === '!!avatar') {
+    var member= message.mentions.members.first();
+    let embed = new Discord.RichEmbed()
+  .setImage(message.member.avatarURL)
+    .setDescription("İşte Avatarın")
+  .setColor('#275BF0')
+    message.channel.send(embed)
+  }
+});
