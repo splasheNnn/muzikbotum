@@ -1,24 +1,20 @@
 const Discord = require('discord.js');
-const ms = require('ms');
+
 exports.run = async(client, message, args) => {
-    let victim = message.mentions.users.cache.first() || (args.length > 0 ? client.users.cache.filter(e => e.username.toLowerCase().includes(args.join(" ").toLowerCase())).first(): message.author) || message.author;
-    let embed = new Discord.MessageEmbed()
-    .setFooter(message.author.username + " tarafından kullanıldı.", message.author.avatarURL())
-    .setDescription(`[Resim Adresi](${victim.avatarURL()})`)
-    .setImage(victim.avatarURL())
-    message.channel.send(embed);
+  let sunucular = client.guilds.array().sort((a, b) => b.memberCount - a.memberCount).slice(0, 10);
+  message.channel.send(new Discord.RichEmbed().setColor('2F3136').setDescription(sunucular.map((sunucu, index) => `${index+1}-) ${sunucu.name} | ${sunucu.memberCount}`).join('\n')).setFooter(message.author.tag + " tarafından istendi!").setTitle(client.user.username + " Top 10 Sunucular").setTimestamp());
 };
 
 exports.conf = {
   enabled: true,
-  guildOnly: true,
-  aliases: ['avtr'],
+  guildOnly: false,
+  aliases: [],
   permLevel: 0
 };
 
 exports.help = { 
-  name: 'avatar', 
-  description: 'Avatar gösteriyor falan',
-  usage: 'avatar @üye/id/isim',
+  name: 'top10', 
+  description: 'Botun ilk 10 sunucusunu listeletir.',
+  usage: 'top10',
   kategori: 'kullanıcı'
 };
