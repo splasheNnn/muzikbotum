@@ -16,21 +16,13 @@ const cooldowns = new Collection();
 const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 
-  client.user.setStatus("online");
-   var oyun = [
-        "Destek sunucumuz saldırıya uğradı sunucumuza gelmek için g!desteksunucum yazabilirsiniz",
-        "Destek sunucumuz saldırıya uğradı sunucumuza gelmek için g!desteksunucum yazabilirsiniz",
-        "💪 7/24 Aktif!",  
-        "💡 g!davet | Botumuzu ekleyin",
-        "👨 35.000 Kullanıcı!",
-        "🌍 115 Sunucuda Hizmet!",
-        "g!yardım 🔥 + g!davet 🔥 + g!otorol"
-    ];
-    setInterval(function() {
-        var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
-        client.user.setGame(oyun[random], "https://rapp");
-        }, 2 * 2500);
-}
+ /**
+ * Client Events
+ */
+client.on("ready", () => {
+  console.log(`${client.user.username} ready!`);
+  client.user.setActivity(`${PREFIX}yardım`);
+});
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
 
