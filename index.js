@@ -174,7 +174,7 @@ client.on('message', msg => {
 client.on('message', message => {
   if (message.content === '!!avatar') {
     var member= message.mentions.members.first();
-    let embed = new Discord.RichEmbed()
+    let embed = new MessageEmbed()
   .setImage(message.member.avatarURL)
     .setDescription("İşte Avatarın")
   .setColor('#275BF0')
