@@ -190,6 +190,6 @@ if(msg.content === '!!toplam')  {
 const embed = new MessageEmbed()
 .setDescription(`${client.user.username}: Şu an ` + client.channels.cache.size + ` adet kanala, ` + client.guilds.cache.size + ` sunucuya `+ client.users.cache.size + ` adet kullanıcıya   hizmet veriliyor!`);
 message.channel.send(embed)
-}
+)}
 	
 }
