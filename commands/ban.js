@@ -36,7 +36,7 @@ module.exports = {
       }
     
     } else {
-      message.reply("Kicklemem için herhangi birisini etiketlemedin!");
+      message.reply("Banlamam için herhangi birisini etiketlemedin!");
     }
   }
 }
