@@ -172,17 +172,16 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg=> {
+if(msg.content === '!!avatar')
+	const embed = new MessageEmbed()
+	.setTitle('Avatarın')
+	.setImage(`user.avatarURL();`)
+	msg.channel.send(embed)
 
-client.on('message', message => {
-  if (message.content === '!!avatar') {
-    var user= message.mentions.members.first();
-    let embed = new MessageEmbed()
-  .setImage(`user.avatarURL()`)
-    .setDescription("İşte Avatarın")
-  .setColor('#275BF0')
-    message.channel.send(embed)
-  }
-});
+})
+
+
 
 
 client.on('message', msg => {
@@ -193,3 +192,4 @@ msg.channel.send(embed)
 }
 	
 });
+
