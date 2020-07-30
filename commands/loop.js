@@ -12,7 +12,7 @@ module.exports = {
     // toggle from false to true and reverse
     queue.loop = !queue.loop;
     return queue.textChannel
-      .send(`**__Şarkı döngüsü :** ${queue.loop ? "**açık**" : "**kapalı**"}`)
+      .send(`**__Şarkı döngüsü :__** ${queue.loop ? "**açık**" : "**kapalı**"}`)
       .catch(console.error);
   }
 };
