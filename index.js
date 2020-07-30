@@ -172,14 +172,14 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg=> {
-if(msg.content === '!!avatar')
-	const embed = new MessageEmbed()
-	.setTitle('Avatarın')
-	.setImage(`user.avatarURL();`)
-	msg.channel.send(embed)
-
-})
+client.on('message', msg => {
+if(msg.content === '!!toplam')  {
+const embed = new MessageEmbed()
+.setImage(`user.avatarURL()`);
+msg.channel.send(embed)
+}
+	
+});
 
 
 
