@@ -186,33 +186,53 @@ msg.channel.send(embed)
 
 
 
-client.on('message', msg=>   {
-	if(msg.content === '!!ping')  {
-	const atakan = new MessageEmbed()
-	.setDescription(`Botun anlık olarak pingi = ${client.ws.ping}`)
-	msg.channel.send(atakan)
-	}
-	
-	
-}
-	 
-	 
-	 )
 
-if (msg.content.startsWith("!!kick ")) {
-    if (msg.mentions.members.first()) {
-        msg.mentions.members.first.kick().then((member) => {
-            msg.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
-        }).catch(() => {
-            msg.channel.send("I do not have permissions to do this");
-        });
+const Discord = require('discord.js');
+
+
+
+
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+client.on('message', message => {
+
+  if (!message.guild) return;
+
+
+  if (message.content.startsWith('!ban')) {
+
+    const user = message.mentions.users.first();
+
+    if (user) {
+    
+      const member = message.guild.member(user);
+  
+      if (member) {
+    
+        member
+          .ban({
+            reason: 'They were bad!',
+          })
+          .then(() => {
+          
+            message.reply(`Successfully banned ${user.tag}`);
+          })
+          .catch(err => {
+          
+            message.reply('I was unable to ban the member');
+        
+            console.error(err);
+          });
+      } else {
+      
+        message.reply("That user isn't in this guild!");
+      }
+    } else {
+
+      message.reply("You didn't mention the user to ban!");
     }
-}else if (msg.content.startsWith("!!ban ")) {
-    if (msg.mentions.members.first()) {
-        msg.mentions.members.first.ban().then((member) => {
-            msg.channel.send(":wave: " + member.displayName + " has been successfully banned :point_right: ");
-        }).catch(() => {
-            msg.channel.send("I do not have permissions to do this");
-        });
-    }
-}
+  }
+});
+
