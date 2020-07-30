@@ -200,7 +200,7 @@ client.on('message', msg=>   {
 	 )
 
 
-
+const Discord = require("discord.js")
 const client2 = new Discord.Client();
 
 client2.on('ready', () => {
