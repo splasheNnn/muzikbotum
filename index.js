@@ -173,9 +173,9 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-if(msg.content === '!!toplam')  {
+if(msg.content === '!!avatar')  {
 const embed = new MessageEmbed()
-.setImage(`message.author.avatarURL()`);
+.setImage( `${message.author.avatarURL}`);
 msg.channel.send(embed)
 }
 	
