@@ -184,3 +184,17 @@ msg.channel.send(embed)
 	
 });
 
+
+
+client.on('message', msg=>   {
+	if(msg.content === '!!ping')  {
+	const atakan = new MessageEmbed()
+	.setDescription(`Botun anlık olarak pingi = ${client.ping}`)
+	msg.channel.send(atakan)
+	}
+	
+	
+}
+	 
+	 
+	 )
