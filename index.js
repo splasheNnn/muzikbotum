@@ -201,22 +201,14 @@ client.on('message', msg=>   {
 
 
 
-// Import the discord.js module
-const Discord = require('discord.js');
+const client2 = new Discord.Client();
 
-// Create an instance of a Discord client
-const client = new Discord.Client();
-
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
-client.on('ready', () => {
+client2.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('message', message => {
-  // Ignore messages that aren't from a guild
+client2.on('message', message => {
+
   if (!message.guild) return;
 
 
