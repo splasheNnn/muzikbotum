@@ -2,23 +2,16 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   name: "avatar",
-  aliases: ["y"],
-  description: "Müzik komutlarını listeler",
+  description: "Avatarınızı gösterir",
   execute(message) {
 
-    let helpEmbed = new MessageEmbed()
-      .setTitle("")
-
-      
-  
-  
-    helpEmbed.setTimestamp();
-
-    return message.channel.send(helpEmbed).catch(console.error);
-    
-    
+    let nowPlaying = new MessageEmbed()
+      .setTitle("**İşte Avatarın**")
+      .setDescription(`${msg.author.avatarURL()}`)
+      .setColor("#F8AA2A")
+      .setTimestamp();
 
 
-
+    return message.channel.send(nowPlaying);
   }
 };
