@@ -110,7 +110,7 @@ module.exports = {
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.loop = !queue.loop;
-          queue.textChannel.send(`${user} **Şarkı döngü modu :**  ${queue.loop ? "__**on**__" : "__**off**__"}`).catch(console.error);
+          queue.textChannel.send(`${user} **__Şarkı döngüsü__ :**  ${queue.loop ? "__**açık**__" : "__**kapalı**__"}`).catch(console.error);
           break;
 
         case "⏹":
