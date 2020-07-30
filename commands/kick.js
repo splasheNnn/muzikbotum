@@ -1,14 +1,14 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = {
-  name: "at",
-  description: "Etiketlenen kişiyi sunucudan atar",
+  name: "kick",
+  description: "Etiketlenen kişiyi sunucudan kickler",
   execute(message) {
 
  if (!message.guild) return;
 
  
-  if (message.content.startsWith('!!at')) {
+  if (message.content.startsWith('!!kick')) {
     
     const user = message.mentions.users.first();
   
@@ -19,24 +19,24 @@ module.exports = {
       if (member) {
       
         member
-          .kick('Optional reason that will display in the audit logs')
+          .kick('Bir sorun meydana geldi')
           .then(() => {
          
             message.reply(`Başarıyla atıldı ${user.tag}`);
           })
           .catch(err => {
            
-            message.reply('I was unable to kick the member');
+            message.reply('Bir sorun meydana geldi');
          
             console.error(err);
           });
       } else {
       
-        message.reply("That user isn't in this guild!");
+        message.reply("Kişi sunucuda bulunmuyor!");
       }
     
     } else {
-      message.reply("You didn't mention the user to kick!");
+      message.reply("Kicklemem için herhangi birisini etiketlemedin!");
     }
   }
 }
