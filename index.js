@@ -198,3 +198,55 @@ client.on('message', msg=>   {
 	 
 	 
 	 )
+
+
+
+// Import the discord.js module
+const Discord = require('discord.js');
+
+// Create an instance of a Discord client
+const client = new Discord.Client();
+
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
+client.on('ready', () => {
+  console.log('I am ready!');
+});
+
+client.on('message', message => {
+  // Ignore messages that aren't from a guild
+  if (!message.guild) return;
+
+
+  if (message.content.startsWith('!!kick')) {
+  
+    const user = message.mentions.users.first();
+    if (user) {
+   
+      const member = message.guild.member(user);
+      if (member) {
+        member
+          .kick('**Atılma nedeni**')
+          .then(() => {
+         
+            message.reply(`**Kullanıcı başarıyla atıldı** ${user.tag}`);
+          })
+          .catch(err => {
+        
+            message.reply('Kullanıcıyı atarken bir sorun meydana geldi');
+            // Log the error
+            console.error(err);
+          });
+      } else {
+    
+        message.reply("Bu üye sunucuda değil!");
+      }
+ 
+    } else {
+      message.reply("Atmam için bir kullanıcı etiketlemelisin!");
+    }
+  }
+});
+
