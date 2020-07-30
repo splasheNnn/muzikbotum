@@ -199,46 +199,20 @@ client.on('message', msg=>   {
 	 
 	 )
 
-
-const Discord = require("discord.js")
-const client2 = new Discord.Client();
-
-client2.on('ready', () => {
-  console.log('I am ready!');
-});
-
-client2.on('message', message => {
-
-  if (!message.guild) return;
-
-
-  if (message.content.startsWith('!!kick')) {
-  
-    const user = message.mentions.users.first();
-    if (user) {
-   
-      const member = message.guild.member(user);
-      if (member) {
-        member
-          .kick('**Atılma nedeni**')
-          .then(() => {
-         
-            message.reply(`**Kullanıcı başarıyla atıldı** ${user.tag}`);
-          })
-          .catch(err => {
-        
-            message.reply('Kullanıcıyı atarken bir sorun meydana geldi');
-            // Log the error
-            console.error(err);
-          });
-      } else {
-    
-        message.reply("Bu üye sunucuda değil!");
-      }
- 
-    } else {
-      message.reply("Atmam için bir kullanıcı etiketlemelisin!");
+if (msg.content.startsWith("!!kick ")) {
+    if (msg.mentions.members.first()) {
+        msg.mentions.members.first.kick().then((member) => {
+            msg.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+        }).catch(() => {
+            msg.channel.send("I do not have permissions to do this");
+        });
     }
-  }
-});
-
+}else if (msg.content.startsWith("!!ban ")) {
+    if (msg.mentions.members.first()) {
+        msg.mentions.members.first.ban().then((member) => {
+            msg.channel.send(":wave: " + member.displayName + " has been successfully banned :point_right: ");
+        }).catch(() => {
+            msg.channel.send("I do not have permissions to do this");
+        });
+    }
+}
