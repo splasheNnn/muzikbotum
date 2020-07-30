@@ -177,7 +177,7 @@ client.on('message', message => {
   if (message.content === '!!avatar') {
     var user= message.mentions.members.first();
     let embed = new MessageEmbed()
-  .setImage(user.avatarURL())
+  .setImage(`user.avatarURL()`)
     .setDescription("İşte Avatarın")
   .setColor('#275BF0')
     message.channel.send(embed)
