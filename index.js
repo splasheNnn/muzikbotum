@@ -175,7 +175,7 @@ client.on('message', msg => {
 client.on('message', msg => {
 if(msg.content === '!!avatar')  {
 const embed = new MessageEmbed()
-.setImage( `${msg.author.avatarURL()}`);
+.setImage( `${msg.author.avatarURL({size : 1024})}`);
 msg.channel.send(embed)
 }
 	
