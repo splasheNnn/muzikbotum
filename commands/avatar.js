@@ -7,7 +7,7 @@ module.exports = {
 
     let nowPlaying = new MessageEmbed()
       .setTitle("**İşte Avatarın**")
-      .setDescription(`${message.author.avatarURL()}`)
+      .setImage( `${msg.author.avatarURL({size : 1024})}`)
       .setColor("#F8AA2A")
       .setTimestamp();
 
