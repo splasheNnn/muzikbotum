@@ -201,7 +201,7 @@ client.on('message', message => {
   if (!message.guild) return;
 
 
-  if (message.content.startsWith('!ban')) {
+  if (message.content.startsWith('!!ban')) {
 
     const user = message.mentions.users.first();
 
@@ -217,21 +217,21 @@ client.on('message', message => {
           })
           .then(() => {
           
-            message.reply(`Successfully banned ${user.tag}`);
+            message.reply(`Kullanıcı başarıyla yasaklandı ${user.tag}`);
           })
           .catch(err => {
           
-            message.reply('I was unable to ban the member');
+            message.reply('Yasaklamada bir sorun meydana geldi');
         
             console.error(err);
           });
       } else {
       
-        message.reply("That user isn't in this guild!");
+        message.reply("Kullanıcı sunucuda bulunmuyor!");
       }
     } else {
 
-      message.reply("You didn't mention the user to ban!");
+      message.reply("Kimi banlamam gerektiğini etiketlemelisin!");
     }
   }
 });
