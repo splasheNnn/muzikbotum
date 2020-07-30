@@ -17,8 +17,7 @@ module.exports = {
       helpEmbed.addField(
         `**✯ |  ${message.client.prefix}${cmd.name} **`,
         `${cmd.description}`,
-        
-        `______________________________________________________`
+        '______________________________________________________'
         
  
   
