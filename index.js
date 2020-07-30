@@ -187,10 +187,9 @@ msg.channel.send(embed)
 
 
 client.on('message', msg=>   {
-	var ping = Date.now() - message.createdTimestamp + " ms";
 	if(msg.content === '!!ping')  {
 	const atakan = new MessageEmbed()
-	.setDescription(`Botun anlık olarak pingi = ${ping}`)
+	.setDescription(`Botun anlık olarak pingi = ${client.ws.ping}`)
 	msg.channel.send(atakan)
 	}
 	
