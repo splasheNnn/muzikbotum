@@ -92,7 +92,7 @@ module.exports = {
         };
       } catch (error) {
         console.error(error);
-        return message.reply("No video was found with a matching title").catch(console.error);
+        return message.reply("Böyle bir şarkı bulunamadı").catch(console.error);
       }
     }
 
@@ -114,7 +114,7 @@ module.exports = {
       console.error(error);
       message.client.queue.delete(message.guild.id);
       await channel.leave();
-      return message.channel.send(`Could not join the channel: ${error}`).catch(console.error);
+      return message.channel.send(`Kanala katılamadım!: ${error}`).catch(console.error);
     }
   }
 };
