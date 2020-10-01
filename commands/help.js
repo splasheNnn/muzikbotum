@@ -7,8 +7,7 @@ module.exports = {
   execute(message) {
     let commands = message.client.commands.array() 
     let helpEmbed = new MessageEmbed()
-      .setTitle("Izuku Müzik | Yardım")
-      .setImage("https://media2.giphy.com/media/kggtkeYWsl9aLpH5to/giphy.gif")
+      .setTitle(" Müzik | Yardım")
       .setDescription("**__Tüm Müzik Komutları__**")
       .setColor("#F8AA2A");
       
